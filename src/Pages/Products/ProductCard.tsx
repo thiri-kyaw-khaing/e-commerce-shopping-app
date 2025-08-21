@@ -24,14 +24,11 @@ export default function ProductCard({ product, className }: ProductCardProps) {
       <Link to={`/products/${product.id}`} className="flex-1 flex flex-col">
         <CardHeader className="border-b space-y-2">
           <AspectRatio ratio={1 / 1} className="bg-muted w-full">
-            {product.images.map((img) => (
-              <img
-                key={img.id}
-                src={img.path}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
-            ))}
+            <img
+              src={product.images[0].path}
+              alt={product.name}
+              className="w-full h-full object-cover"
+            />
           </AspectRatio>
         </CardHeader>
         <CardContent className="flex-1 mt-3">

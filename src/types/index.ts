@@ -16,6 +16,12 @@ type Image = {
   path: string; // Image URL or file path
 };
 
+type Review = {
+  rating: number; // Rating given by the user (0-5)
+  comment: string; // Review text
+  userName?: string; // Optional: User's name or identifier
+};
+
 export type ProductCategory = "Sports" | "Casual" | "Formal" | "Other";
 
 export type ProductStatus = "active" | "inactive" | "archived";
@@ -35,4 +41,5 @@ export type Product = {
   inventory: number; // Stock quantity
   status: ProductStatus; // Current product status
   isNew?: boolean; // Optional: for "NEW" badge
+  reviews?: Review[]; // Optional: Array of review IDs or text
 };

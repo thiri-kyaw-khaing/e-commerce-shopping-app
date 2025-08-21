@@ -1,18 +1,30 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { productData } from "@/data/products"; // Assuming you have a products data file
 import { CarouselCard } from "@/components/UI components/CarouselCard";
 import Rating from "./rating";
 import { Separator } from "@/components/ui/separator";
 import AddToCart from "./AddToCart";
+import ReviewCard from "./ReviewCard";
+import type { HTMLAttributes } from "react";
+import type { Product } from "@/types";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+
 export default function ProductDetailPage() {
   const { productId } = useParams<{ productId: string }>();
   const product = productData.find((p) => p.id === productId);
 
   return (
     <>
+      <Button variant="outline" className="mb-8" asChild>
+        <Link to="/">
+          <ArrowLeft />
+          All Posts
+        </Link>
+      </Button>
       <div className="grid grid-cols-3 gap-2">
-        <div>
-          <CarouselCard />
+        <div className="h-full col-span-1">
+          <CarouselCard product={product} />
         </div>
         <div className="flex flex-col gap-3 w-full col-span-2 p-4">
           <span className="text-sm text-gray-500">
@@ -51,6 +63,12 @@ export default function ProductDetailPage() {
           {/* Quantity */}
           <span>Quantity:</span>
           <AddToCart showBuyNow={product?.status === "active" ? true : false} />
+        </div>
+      </div>
+      <div>
+        <div className="mt-4">
+          {/* ReviewCard component can be used here */}
+          <ReviewCard />
         </div>
       </div>
     </>

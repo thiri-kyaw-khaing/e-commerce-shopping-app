@@ -6,7 +6,11 @@ export const productData: Product[] = [
     name: "Sneakers",
     description:
       "Lightweight running shoes with excellent cushioning and support.",
-    images: [{ id: 101, path: "/images/dunk.avif" }],
+    images: [
+      { id: 101, path: "/images/dunk.avif" },
+      { id: 107, path: "/images/dunkpanda.jpg" },
+      { id: 108, path: "/images/nikedunklow.jpg" },
+    ],
     categoryId: "uuid-sports",
     categoryName: "Sports",
     price: 4500000,
@@ -17,6 +21,13 @@ export const productData: Product[] = [
     inventory: 100,
     status: "active",
     isNew: true,
+    reviews: [
+      {
+        rating: 4.5,
+        comment: "Great product! Really enjoyed using it.",
+        userName: "John Doe",
+      },
+    ],
   },
   {
     id: "uuid2",
@@ -49,6 +60,14 @@ export const productData: Product[] = [
     inventory: 60,
     status: "active",
     isNew: false,
+    reviews: [
+      {
+        rating: 4.0,
+        comment:
+          "Very comfortable and stylish for daily use.Very comfortable and stylish for daily use.Very comfortable and stylish for daily use.Very comfortable and stylish for daily use.",
+        userName: "Jane Smith",
+      },
+    ],
   },
   {
     id: "uuid4",
