@@ -8,6 +8,7 @@ import AuthRootLayout from "@/components/auth/AuthRootLayout";
 import CreateAccPage from "@/Pages/auth/CreateAccPage";
 import ProductRootLayout from "./Pages/Products/ProductRootLayout";
 import ProductDetailPage from "./Pages/Products/ProductDetail";
+import AboutPage from "./Pages/AboutPage";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
         path: "products",
         Component: ProductRootLayout,
         children: [{ path: ":productId", Component: ProductDetailPage }],
+      },
+      {
+        path: "about",
+        Component: AboutPage,
       },
     ],
   },
