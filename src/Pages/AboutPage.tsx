@@ -1,3 +1,4 @@
+import FastShippingCard from "@/components/UI components/FastShipping";
 import IconCard from "@/components/UI components/PhoneIconCard";
 import { PhoneCallIcon } from "lucide-react";
 
@@ -54,7 +55,10 @@ export default function AboutPage() {
           <h1 className="text-center text-2xl font-semibold p-4">
             Why E-commerce?
           </h1>
-          <IconCard />
+          <div className="grid grid-cols-3 gap-4">
+            <IconCard />
+            <FastShippingCard />
+          </div>
         </div>
       </div>
     </>

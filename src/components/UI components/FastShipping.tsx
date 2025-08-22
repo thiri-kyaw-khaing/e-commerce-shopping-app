@@ -8,10 +8,10 @@ export default function FastShippingCard() {
           <MailIcon className="text-white w-8 h-8" />
         </div>
         <h1 className="items-center justify-center font-semibold">
-          24/7 support
+          Fast Shipping
         </h1>
         <span className="text-gray-500 line-clamp-3">
-          Our customer service team is available round the clock to help you.
+          Free shipping on orders over $50 with delivery in 3-5 business days.
         </span>
       </div>
     </>
