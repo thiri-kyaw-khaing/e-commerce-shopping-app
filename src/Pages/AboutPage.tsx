@@ -1,11 +1,13 @@
+import ContactUs from "@/components/UI components/ContactUs";
 import FastShippingCard from "@/components/UI components/FastShipping";
 import IconCard from "@/components/UI components/PhoneIconCard";
+import SecureShippingCard from "@/components/UI components/SecureShopping";
 import { PhoneCallIcon } from "lucide-react";
 
 export default function AboutPage() {
   return (
     <>
-      <div className="space-y-4">
+      <div className="space-y-8">
         <h1 className="text-center font-semibold text-2xl">About E-commerce</h1>
         <span className="mt-4 flex text-center justify-center text-gray-600 ">
           Your trusted destination for quality products and exceptional service
@@ -51,14 +53,19 @@ export default function AboutPage() {
             </span>
           </div>
         </div>
-        <div className="bg-gray-300 rounded-md">
+        <div className="bg-gray-300 rounded-md mt-20 mb-15">
           <h1 className="text-center text-2xl font-semibold p-4">
             Why E-commerce?
           </h1>
           <div className="grid grid-cols-3 gap-4">
             <IconCard />
             <FastShippingCard />
+            <SecureShippingCard />
           </div>
+        </div>
+
+        <div className="">
+          <ContactUs />
         </div>
       </div>
     </>

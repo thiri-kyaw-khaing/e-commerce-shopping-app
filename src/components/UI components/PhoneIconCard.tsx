@@ -3,7 +3,7 @@ import { PhoneCallIcon } from "lucide-react";
 export default function PhoneIconCard() {
   return (
     <>
-      <div className="flex flex-col m-4 items-center">
+      <div className="flex flex-col m-4 items-center text-center space-y-4">
         <div className=" rounded-4xl bg-black w-[60px] h-[60px] flex items-center justify-center">
           <PhoneCallIcon className="text-white w-8 h-8" />
         </div>
