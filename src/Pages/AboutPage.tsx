@@ -1,3 +1,6 @@
+import IconCard from "@/components/UI components/PhoneIconCard";
+import { PhoneCallIcon } from "lucide-react";
+
 export default function AboutPage() {
   return (
     <>
@@ -24,10 +27,34 @@ export default function AboutPage() {
               every aspect of our business is designed with you in mind.
             </span>
           </div>
-          <div>
+          <div className="">
             <h1 className="font-semibold text-xl">Our Values</h1>
-            <h3 className="font-bold text-md">Quality First</h3>
+            <h3 className="font-bold text-md mt-4 mb-2">Quality First</h3>
+            <span className="text-gray-600">
+              We partner with trusted suppliers and rigorously test our products
+              to ensure they meet our high standards.
+            </span>
+
+            <h3 className="font-bold text-md mt-4 mb-2">
+              Customer Satisfication
+            </h3>
+            <span className="text-gray-600">
+              Your happiness is our priority. We offer hassle-free returns and
+              dedicated customer support.
+            </span>
+
+            <h3 className="font-bold text-md mt-4 mb-2">Innovation</h3>
+            <span className="text-gray-600 line-clamp-3">
+              We continuously improve our platform and services to provide you
+              with the best shopping experience possible.
+            </span>
           </div>
+        </div>
+        <div className="bg-gray-300 rounded-md">
+          <h1 className="text-center text-2xl font-semibold p-4">
+            Why E-commerce?
+          </h1>
+          <IconCard />
         </div>
       </div>
     </>
