@@ -9,6 +9,7 @@ import CreateAccPage from "@/Pages/auth/CreateAccPage";
 import ProductRootLayout from "./Pages/Products/ProductRootLayout";
 import ProductDetailPage from "./Pages/Products/ProductDetail";
 import AboutPage from "./Pages/AboutPage";
+import FAQPage from "./Pages/FAQPage";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: "about",
         Component: AboutPage,
+      },
+      {
+        path: "faq",
+        Component: FAQPage,
       },
     ],
   },

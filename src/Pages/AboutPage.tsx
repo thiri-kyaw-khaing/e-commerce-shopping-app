@@ -15,14 +15,14 @@ export default function AboutPage() {
         <div className="grid grid-cols-2 mt-4 gap-8">
           <div className="space-y-4 p-4">
             <h1 className=" font-semibold text-xl">Our Story</h1>
-            <span className="text-gray-600 line-clamp-12">
+            <span className="text-gray-600 line-clamp-12 text-md">
               Founded in 2020, E-commerce began as a small family business with
               a simple mission: to provide high-quality products at affordable
               prices while delivering exceptional customer service. What started
               as a local store has grown into a trusted online marketplace
               serving customers worldwide.
             </span>
-            <span className="text-gray-600 line-clamp-12">
+            <span className="text-gray-600 line-clamp-12 text-md">
               We believe that shopping should be enjoyable, convenient, and
               secure. That's why we've invested in creating a seamless online
               experience that puts our customers first. From our carefully
