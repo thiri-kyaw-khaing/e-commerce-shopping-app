@@ -3,7 +3,7 @@ export default function ContactUs() {
     <>
       <div className="border rounded-md border-black">
         <h1 className="text-2xl font-bold m-6">Contact Us</h1>
-        <div className="grid grid-cols-2 m-6">
+        <div className="flex gap-4 m-6">
           {/* Customer Service */}
           <div className="flex flex-col w-1/2">
             <h3 className="font-semibold">Customer Service</h3>

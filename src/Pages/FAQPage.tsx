@@ -1,6 +1,7 @@
 import AccordionFAQ from "@/components/UI components/AccordinaFAQ";
 import { Button } from "@/components/ui/button";
-import { MailIcon } from "lucide-react";
+import { MailIcon, PhoneCallIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function FAQPage() {
   return (
@@ -13,7 +14,7 @@ export default function FAQPage() {
           Find answers to common questions about our products and services
         </span>
 
-        <div>
+        <div className="mt-6">
           <AccordionFAQ />
         </div>
 
@@ -26,10 +27,18 @@ export default function FAQPage() {
           </span>
 
           {/* call us buttons */}
-          <div className="grid grid-cols-2">
-            <Button>
-              <MailIcon /> <h1>Email Support</h1>
-            </Button>
+          <div className="flex gap-4">
+            <Link to="#">
+              <Button className="w-[150px]">
+                <MailIcon /> <h1>Email Support</h1>
+              </Button>
+            </Link>
+
+            <Link to="#">
+              <Button className="w-[150px]" variant={"outline"}>
+                <PhoneCallIcon /> <h1>Call Us</h1>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
