@@ -9,6 +9,7 @@ import AuthDropDown from "../HeaderComponent/AuthDropDown";
 import { User } from "@/data/user";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
+import { cartItems } from "@/data/cartItems";
 export default function Header() {
   return (
     <header className="w-full border-b">
@@ -20,7 +21,7 @@ export default function Header() {
           <GetNoti />
           <Button className="bg-transparent size-8">
             <Link to="/cart">
-              <GetCart />
+              <GetCart items={cartItems} />
             </Link>
           </Button>
           <AuthDropDown user={User} />
