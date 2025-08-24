@@ -27,7 +27,7 @@ const quantitySchema = z.object({
   number: z.number().min(0),
 });
 
-export default function AddToCart({ showBuyNow }: { showBuyNow?: boolean }) {
+export default function CartQuantity({ showBuyNow }: { showBuyNow?: boolean }) {
   // ...
   // 1. Define your form.
   const form = useForm<z.infer<typeof quantitySchema>>({
@@ -84,7 +84,7 @@ export default function AddToCart({ showBuyNow }: { showBuyNow?: boolean }) {
             <PlusIcon className="size-3" />
           </Button>
         </div>
-        <div className="flex items-center space-x-2">
+        {/* <div className="flex items-center space-x-2">
           <Button
             type="button"
             size="sm"
@@ -104,7 +104,7 @@ export default function AddToCart({ showBuyNow }: { showBuyNow?: boolean }) {
             <ShoppingBasketIcon />
             Add to Cart
           </Button>
-        </div>
+        </div> */}
       </form>
     </Form>
   );
