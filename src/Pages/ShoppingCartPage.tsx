@@ -1,6 +1,7 @@
 import { cartItems } from "@/data/cartItems";
 import type { cartItem } from "@/types";
 import { Checkbox } from "@/components/ui/checkbox";
+import AddToCart from "./Products/AddToCart";
 interface cartProps {
   items?: cartItem[];
 }
@@ -28,7 +29,14 @@ export default function ShoppingCartPage({ items = cartItems }: cartProps) {
                 className="w-[100px] h-[100px] object-cover"
               />
             </div>
-            <div className="">{item.name}</div>
+            <div className="space-y-2">
+              <h1>{item.name}</h1>
+              <span className="text-gray-500">{item.category}</span>
+              <div className="flex mt-2 font-semibold gap-20">
+                <h1>{item.price} MMK</h1>
+                <span>Quantity:</span>
+              </div>
+            </div>
           </div>
         ))
       )}
