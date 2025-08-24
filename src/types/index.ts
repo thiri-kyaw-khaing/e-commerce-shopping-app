@@ -43,3 +43,12 @@ export type Product = {
   isNew?: boolean; // Optional: for "NEW" badge
   reviews?: Review[]; // Optional: Array of review IDs or text
 };
+
+export type User = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  username: string;
+  email: string;
+  imageUrl: string;
+};
