@@ -7,6 +7,8 @@ import { GetNoti } from "../HeaderComponent/Notification";
 import { GetCart } from "../HeaderComponent/Cart";
 import AuthDropDown from "../HeaderComponent/AuthDropDown";
 import { User } from "@/data/user";
+import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header className="w-full border-b">
@@ -16,7 +18,11 @@ export default function Header() {
           <Navigation items={siteConfig.mainNav} />
           <SearchBar />
           <GetNoti />
-          <GetCart />
+          <Button className="bg-transparent size-8">
+            <Link to="/cart">
+              <GetCart />
+            </Link>
+          </Button>
           <AuthDropDown user={User} />
         </div>
       </nav>

@@ -10,6 +10,7 @@ import ProductRootLayout from "./Pages/Products/ProductRootLayout";
 import ProductDetailPage from "./Pages/Products/ProductDetail";
 import AboutPage from "./Pages/AboutPage";
 import FAQPage from "./Pages/FAQPage";
+import ShoppingCartPage from "./Pages/ShoppingCartPage";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: "faq",
         Component: FAQPage,
+      },
+      {
+        path: "cart",
+        Component: ShoppingCartPage,
       },
     ],
   },
