@@ -5,11 +5,15 @@ import AddToCart from "./Products/AddToCart";
 import CartQuantity from "@/components/UI components/CartQuantity";
 import { DeleteIcon, Trash2Icon } from "lucide-react";
 import { TrashIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 interface cartProps {
   items?: cartItem[];
 }
 
 export default function ShoppingCartPage({ items = cartItems }: cartProps) {
+  const itemCount = 2;
+  const totalPrice = 9100000;
   return (
     <>
       {/* <div className="font-bold text-2xl">Shopping cart</div>
@@ -52,6 +56,28 @@ export default function ShoppingCartPage({ items = cartItems }: cartProps) {
           </div>
         ))
       )}
+
+      <div className="w-full  border-t bg-gray-300 h-28 fixed bottom-40 left-0 border-black border-b pl-24">
+        <div className="flex items-center gap-30 m-6 mt-8">
+          <Checkbox className="border-black" />
+          <span>Select all items</span>
+
+          <Button variant="link" className="text-red-500">
+            Delete
+          </Button>
+          <span className="font-bold text-lg">
+            Total:(
+            {itemCount} items )
+          </span>
+          <span className="font-bold text-lg">{totalPrice} MMK</span>
+
+          <Link to="/checkout">
+            <Button className=" lg:py-6 w-[100px] max-w-screen-xl ml-4 text-white bg-black">
+              Checkout
+            </Button>
+          </Link>
+        </div>
+      </div>
     </>
   );
 }
