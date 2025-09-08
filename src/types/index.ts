@@ -67,3 +67,22 @@ export type cartItem = {
   category: string;
   // subcategory: string;
 };
+
+export type OrderUser = {
+  id: string; // user id (UUID or DB id)
+  fullName: string; // customer full name
+  phone: string; // customer phone number
+  address: string; // shipping address
+  city?: string; // optional city
+  postalCode?: string; // optional postal code
+  country?: string; // optional country
+};
+
+export type Order = {
+  orderId: string;
+  user: OrderUser;
+  items: cartItem[];
+  totalAmount: number; // sum of items
+  createdAt: Date;
+  status: "pending" | "paid" | "shipped" | "delivered" | "cancelled";
+};
