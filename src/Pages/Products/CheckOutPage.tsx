@@ -2,6 +2,7 @@ import type { OrderUser } from "@/types";
 import { MapPin } from "lucide-react";
 import OrderUserInfo from "@/components/UI components/orderUserInfo";
 import { orderUser } from "@/data/orderuser";
+import ProductOrdered from "@/components/UI components/productOrdered";
 
 export default function CheckOutPage() {
   return (
@@ -10,6 +11,9 @@ export default function CheckOutPage() {
 
       <div>
         <OrderUserInfo orderUser={orderUser} />
+      </div>
+      <div className="mt-6">
+        <ProductOrdered />
       </div>
     </>
   );

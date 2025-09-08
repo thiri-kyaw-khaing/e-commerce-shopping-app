@@ -11,7 +11,7 @@ import ProductDetailPage from "./Pages/Products/ProductDetail";
 import AboutPage from "./Pages/AboutPage";
 import FAQPage from "./Pages/FAQPage";
 import ShoppingCartPage from "./Pages/ShoppingCartPage";
-import CheckOutPage from "./Pages/CheckOutPage";
+import CheckOutPage from "./Pages/Products/CheckOutPage";
 export const router = createBrowserRouter([
   {
     path: "/",
