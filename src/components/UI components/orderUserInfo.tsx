@@ -8,7 +8,7 @@ interface orderUserProps {
 export default function orderUserInfo({ orderUser }: orderUserProps) {
   return (
     <>
-      <div className="border p-6 space-y-6">
+      <div className="border p-6 space-y-6 rounded-md">
         <div className="flex items-center gap-4">
           <MapPin className="h-6 w-6 text-black" />
           <span className=" text-md">Shipping Address</span>

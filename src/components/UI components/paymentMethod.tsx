@@ -29,7 +29,7 @@ export default function paymentMethod() {
   );
   return (
     <>
-      <div className="border p-6 mt-6 space-y-6">
+      <div className="border p-6 mt-6 space-y-6 rounded-md">
         <div>
           <h1 className="font-bold">Payment Method</h1>
         </div>
