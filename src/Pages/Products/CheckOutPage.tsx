@@ -4,6 +4,7 @@ import OrderUserInfo from "@/components/UI components/orderUserInfo";
 import { orderUser } from "@/data/orderuser";
 import { exampleOrder } from "@/data/order";
 import ProductOrdered from "@/components/UI components/productOrdered";
+import PaymentMethod from "@/components/UI components/paymentMethod";
 
 export default function CheckOutPage() {
   return (
@@ -15,6 +16,7 @@ export default function CheckOutPage() {
       </div>
       <div className="mt-6">
         <ProductOrdered order={exampleOrder} />
+        <PaymentMethod />
       </div>
     </>
   );
