@@ -4,8 +4,8 @@ import { User } from "@/data/user";
 
 export default function ProfilePage() {
   return (
-    <div>
+    <>
       <ProfileAvatar user={User} />
-    </div>
+    </>
   );
 }
