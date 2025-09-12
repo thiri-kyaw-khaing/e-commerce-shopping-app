@@ -41,16 +41,17 @@ export const router = createBrowserRouter([
         path: "/checkout",
         Component: CheckOutPage,
       },
+      {
+        path: "/profile",
+        Component: ProfilePage,
+      },
     ],
   },
   {
     path: "/login",
     Component: SignInPage,
   },
-  {
-    path: "/profile",
-    Component: ProfilePage,
-  },
+
   {
     path: "/register",
     Component: AuthRootLayout,
