@@ -109,6 +109,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import UpdateProfile from "@/Pages/auth/UpdateProfile";
 
 export default function ProfilePage() {
   return (
@@ -154,28 +155,7 @@ export default function ProfilePage() {
           <div className="flex-1 ml-6 overflow-auto">
             <TabsContent value="profile" className="h-full w-full">
               <div className="bg-white p-6 rounded-xl border h-full">
-                <Card className="w-full max-w-2xl">
-                  <CardHeader>
-                    <CardTitle>Account</CardTitle>
-                    <CardDescription>
-                      Make changes to your account here. Click save when you're
-                      done.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="grid gap-6">
-                    <div className="grid gap-3">
-                      <Label htmlFor="name">Name</Label>
-                      <Input id="name" defaultValue="Pedro Duarte" />
-                    </div>
-                    <div className="grid gap-3">
-                      <Label htmlFor="username">Username</Label>
-                      <Input id="username" defaultValue="@peduarte" />
-                    </div>
-                  </CardContent>
-                  <CardFooter>
-                    <Button>Save changes</Button>
-                  </CardFooter>
-                </Card>
+                <UpdateProfile />
               </div>
             </TabsContent>
 
