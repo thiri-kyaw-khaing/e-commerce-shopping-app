@@ -52,8 +52,9 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 // }
 export default function UpdateProfile() {
   return (
+    //items are in flex row when use flex w-full gap-6
     <div className="flex w-full gap-6">
-      {/* <Card className="w-full h-full mt-6"> */}
+      {/* let left side to be flex-1 and take width 4/5 */}
       <div className="flex-1 w-4/5">
         <CardHeader>
           <CardTitle className="text-xl font-semibold">My Profile</CardTitle>
@@ -94,6 +95,7 @@ export default function UpdateProfile() {
           <Button>Save changes</Button>
         </CardFooter>
       </div>
+      {/* let right side to be w-1/5 */}
       <div className="w-1/5 flex">
         <Separator orientation="vertical" className="h-full" />
         <div className="">

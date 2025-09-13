@@ -110,8 +110,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import UpdateProfile from "@/Pages/auth/UpdateProfile";
+import ChangePasswordForm from "../auth/changePasswordForm";
 
-export default function ProfilePage() {
+export default function ProfileSettingPage() {
   return (
     <div className="h-[calc(100vh-128px)] w-full px-6 py-4 flex flex-col overflow-hidden">
       {/* Avatar + name */}
@@ -159,9 +160,9 @@ export default function ProfilePage() {
               </div>
             </TabsContent>
 
-            <TabsContent value="history" className="h-full w-full">
+            <TabsContent value="password" className="h-full w-full">
               <div className="bg-white p-6 rounded-xl border h-full">
-                Order history goes here...
+                <ChangePasswordForm />
               </div>
             </TabsContent>
           </div>

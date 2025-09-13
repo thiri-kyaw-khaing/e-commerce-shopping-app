@@ -12,7 +12,7 @@ import AboutPage from "./Pages/AboutPage";
 import FAQPage from "./Pages/FAQPage";
 import ShoppingCartPage from "./Pages/ShoppingCartPage";
 import CheckOutPage from "./Pages/Products/CheckOutPage";
-import ProfilePage from "./Pages/auth/ProfilePage";
+import ProfileSettingPage from "./components/HeaderComponent/profileSettingPage";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        Component: ProfilePage,
+        Component: ProfileSettingPage,
       },
     ],
   },
