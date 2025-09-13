@@ -111,6 +111,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import UpdateProfile from "@/Pages/auth/UpdateProfile";
 import ChangePasswordForm from "../auth/changePasswordForm";
+import OrderHistory from "../UI components/OrderHistory";
 
 export default function ProfileSettingPage() {
   return (
@@ -163,6 +164,12 @@ export default function ProfileSettingPage() {
             <TabsContent value="password" className="h-full w-full">
               <div className="bg-white p-6 rounded-xl border h-full">
                 <ChangePasswordForm />
+              </div>
+            </TabsContent>
+
+            <TabsContent value="history" className="h-full w-full">
+              <div className="bg-white p-6 rounded-xl border h-full">
+                <OrderHistory />
               </div>
             </TabsContent>
           </div>
