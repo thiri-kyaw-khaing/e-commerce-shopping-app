@@ -29,3 +29,33 @@ export const exampleOrder: Order = {
   createdAt: new Date(),
   status: "pending",
 };
+
+export const exampleOrder2: Order = {
+  orderId: "order124",
+  user: {
+    id: "user2",
+    fullName: "Aung Myo Min",
+    phone: "+66 987654321",
+    address: "456 Mae Fah Luang Avenue, Wiang District",
+    city: "Chiang Rai",
+    postalCode: "57110",
+    country: "Thailand",
+  },
+  items: [
+    {
+      id: "ci2",
+      name: "Adidas Samba",
+      price: 220_000,
+      quantity: 1,
+      image: {
+        id: "img2",
+        name: "ultraboost.jpg",
+        url: "/images/samba.webp",
+      },
+      category: "Footwear",
+    },
+  ],
+  totalAmount: 220_000,
+  createdAt: new Date(),
+  status: "paid",
+};

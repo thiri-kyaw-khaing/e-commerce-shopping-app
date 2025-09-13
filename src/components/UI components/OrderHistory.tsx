@@ -1,4 +1,4 @@
-import { exampleOrder } from "@/data/order";
+import { exampleOrder, exampleOrder2 } from "@/data/order";
 import { CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
@@ -11,8 +11,9 @@ import {
 import ProductOrderedCard from "@/components/UI components/productOrdered";
 export default function OrderHistory() {
   return (
-    <div>
+    <div className="flex flex-col gap-6">
       <ProductOrderedCard order={exampleOrder} />
+      <ProductOrderedCard order={exampleOrder2} />
     </div>
   );
 }
