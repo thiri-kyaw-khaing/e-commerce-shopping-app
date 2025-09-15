@@ -87,3 +87,5 @@ export type Order = {
   createdAt: Date;
   status: "pending" | "paid" | "shipped" | "delivered" | "cancelled";
 };
+
+export type NavBarAdmin = {};

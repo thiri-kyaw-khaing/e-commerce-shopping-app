@@ -73,3 +73,38 @@ export const siteConfig = {
     },
   ],
 };
+
+export const siteConfigAdmin = {
+  name: "Admin Dashboard",
+  description:
+    "Your trusted destination for quality products and exceptional service.",
+  mainNav: [
+    {
+      title: "Overview",
+    },
+    {
+      title: "Products",
+      href: "products",
+    },
+    {
+      title: "Categories",
+      href: "categories",
+    },
+    {
+      title: "Users",
+      href: "users",
+    },
+    {
+      title: "Payment Approvals",
+      href: "payments",
+    },
+    {
+      title: "Promotion",
+      href: "promotion",
+    },
+    {
+      title: "Modification",
+      href: "modification",
+    },
+  ],
+};
