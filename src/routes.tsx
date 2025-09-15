@@ -13,6 +13,8 @@ import FAQPage from "./Pages/FAQPage";
 import ShoppingCartPage from "./Pages/ShoppingCartPage";
 import CheckOutPage from "./Pages/Products/CheckOutPage";
 import ProfileSettingPage from "./components/HeaderComponent/profileSettingPage";
+import RootLayoutAdmin from "./Pages/admin/rootlayout";
+import AdminDashboardPage from "./Pages/admin/adminDashboard";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -50,6 +52,11 @@ export const router = createBrowserRouter([
   {
     path: "/login",
     Component: SignInPage,
+  },
+  {
+    path: "/admin",
+    Component: RootLayoutAdmin,
+    children: [{ index: true, Component: AdminDashboardPage }],
   },
 
   {
