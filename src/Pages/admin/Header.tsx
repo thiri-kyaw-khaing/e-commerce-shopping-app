@@ -1,6 +1,7 @@
 import ProfileButton from "@/components/HeaderComponent/profile";
 import { Separator } from "@/components/ui/separator";
 import { User } from "@/data/user";
+import AdminDashboardPage from "./adminDashboard";
 
 export default function Header() {
   return (

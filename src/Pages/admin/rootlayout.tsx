@@ -1,11 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
+import AdminDashboardPage from "./adminDashboard";
 
 export default function RootLayoutAdmin() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
+      <AdminDashboardPage />
       <Outlet />
+
+      {/* Main content area */}
     </div>
     //     <>
     //   <div className="flex flex-col min-h-screen">

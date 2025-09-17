@@ -24,7 +24,8 @@ export default function NavBar({ items }: NavigationProps) {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <NavLink
-                    to="#"
+                    to="/admin"
+                    end
                     className={({ isActive }) =>
                       `${navigationMenuTriggerStyle()} ${
                         isActive
@@ -41,7 +42,7 @@ export default function NavBar({ items }: NavigationProps) {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <NavLink
-                    to="#"
+                    to="/admin/products"
                     className={({ isActive }) =>
                       `${navigationMenuTriggerStyle()} ${
                         isActive
