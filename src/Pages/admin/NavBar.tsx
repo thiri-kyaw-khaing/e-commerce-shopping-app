@@ -10,76 +10,134 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import type { MainNavItem } from "@/types";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 interface NavigationProps {
   items: MainNavItem[];
 }
 export default function NavBar({ items }: NavigationProps) {
   return (
     <>
-      <div className="container mx-auto">
-        <NavigationMenu viewport={false}>
-          <NavigationMenuList className="flex justify-evenly w-full bg-muted rounded-xl py-2">
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link to="#">{items[0].title}</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+      <div className="w-full">
+        <div className="w-full bg-muted rounded-xl">
+          <NavigationMenu viewport={false}>
+            <NavigationMenuList className="flex justify-evenly w-full bg-gray-400 rounded-xl py-3 gap-4 px-6">
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <NavLink
+                    to="#"
+                    className={({ isActive }) =>
+                      `${navigationMenuTriggerStyle()} ${
+                        isActive
+                          ? "bg-white text-black rounded-xl"
+                          : "bg-gray-400 text-black  rounded-xl"
+                      }`
+                    }
+                  >
+                    {items[0].title}
+                  </NavLink>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link to="#">{items[1]?.title}</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <NavLink
+                    to="#"
+                    className={({ isActive }) =>
+                      `${navigationMenuTriggerStyle()} ${
+                        isActive
+                          ? "bg-white text-black rounded-xl"
+                          : "bg-gray-400 text-black  rounded-xl"
+                      }`
+                    }
+                  >
+                    {items[1].title}
+                  </NavLink>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link to="#">{items[2]?.title}</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link to="#">{items[3]?.title}</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link to="#">{items[4]?.title}</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link to="#">{items[5]?.title}</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link to="#">{items[6]?.title}</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <NavLink
+                    to="#"
+                    className={({ isActive }) =>
+                      `${navigationMenuTriggerStyle()} ${
+                        isActive
+                          ? "bg-white text-black rounded-xl"
+                          : "bg-gray-400 text-black  rounded-xl"
+                      }`
+                    }
+                  >
+                    {items[2].title}
+                  </NavLink>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <NavLink
+                    to="#"
+                    className={({ isActive }) =>
+                      `${navigationMenuTriggerStyle()} ${
+                        isActive
+                          ? "bg-white text-black rounded-xl"
+                          : "bg-gray-400 text-black  rounded-xl"
+                      }`
+                    }
+                  >
+                    {items[3].title}
+                  </NavLink>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <NavLink
+                    to="#"
+                    className={({ isActive }) =>
+                      `${navigationMenuTriggerStyle()} ${
+                        isActive
+                          ? "bg-white text-black rounded-xl"
+                          : "bg-gray-400 text-black  rounded-xl"
+                      }`
+                    }
+                  >
+                    {items[4]?.title}
+                  </NavLink>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <NavLink
+                    to="#"
+                    className={({ isActive }) =>
+                      `${navigationMenuTriggerStyle()} ${
+                        isActive
+                          ? "bg-white text-black rounded-xl"
+                          : "bg-gray-400 text-black  rounded-xl"
+                      }`
+                    }
+                  >
+                    {items[5]?.title}
+                  </NavLink>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <NavLink
+                    to="#"
+                    className={({ isActive }) =>
+                      `${navigationMenuTriggerStyle()} ${
+                        isActive
+                          ? "bg-white text-black rounded-xl"
+                          : "bg-gray-400 text-black  rounded-xl"
+                      }`
+                    }
+                  >
+                    {items[6]?.title}
+                  </NavLink>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
       </div>
     </>
   );
