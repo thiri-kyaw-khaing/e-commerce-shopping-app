@@ -1,5 +1,7 @@
 import { PlusIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+import ProductListTable from "./components/productListTable";
 export default function AdminProductPage() {
   return (
     <>
@@ -9,6 +11,9 @@ export default function AdminProductPage() {
           <Button>
             <PlusIcon className="h-4 w-4 inline-block mr-2" /> Add Product
           </Button>
+        </div>
+        <div className="my-4">
+          <ProductListTable />
         </div>
       </div>
     </>
