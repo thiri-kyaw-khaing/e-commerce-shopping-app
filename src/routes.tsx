@@ -18,6 +18,7 @@ import AdminDashboardPage from "./Pages/admin/adminDashboard";
 import AdminProductPage from "./Pages/admin/adminProduct";
 import AdminOverview from "./Pages/admin/adminOverview";
 import AdminProductCreatePage from "./Pages/admin/adminProductCreate";
+import AdminProductEditPage from "./Pages/admin/adminProductEdit";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -63,6 +64,7 @@ export const router = createBrowserRouter([
       { index: true, Component: AdminOverview },
       { path: "products", Component: AdminProductPage },
       { path: "products/new", Component: AdminProductCreatePage },
+      { path: "products/edit/:productId", Component: AdminProductEditPage },
     ],
   },
 
