@@ -10,6 +10,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { DeleteIcon, EditIcon, TrashIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -78,9 +79,11 @@ export default function productListTable() {
             <TableCell className="text-right">{product.stock}</TableCell>
             <TableCell className="text-right">
               <div className="flex justify-end gap-2">
-                <Button variant="outline">
-                  <EditIcon />
-                </Button>
+                <Link to={`/admin/products/edit/${product.product}`}>
+                  <Button variant="outline">
+                    <EditIcon />
+                  </Button>
+                </Link>
                 <Button variant="destructive">
                   <TrashIcon />
                 </Button>
