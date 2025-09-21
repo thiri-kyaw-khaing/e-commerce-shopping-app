@@ -59,7 +59,7 @@ const products = [
 export default function productListTable() {
   return (
     <Table>
-      <TableCaption>A list of your recent invoices.</TableCaption>
+      <TableCaption>A list of your recent products.</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead className="w-[100px]">Product</TableHead>
